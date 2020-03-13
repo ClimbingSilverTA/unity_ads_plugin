@@ -11,10 +11,15 @@ class UnityAdsPlugin {
     return version;
   }
 
-  static void init(String appId, {bool testMode = false}) {
+  static initialize(String gameId, {bool testMode = false}) async {
+    await _channel.invokeMethod('initialize', {
+      'game_id': gameId,
+      'test_mode': testMode
+    });
+  }
 
-
-
+  static Future<bool> show() async {
+    return await _channel.invokeMethod('show');
   }
 
 }
