@@ -13,7 +13,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    UnityAdsPlugin.initialize("", testMode: true);
+    UnityAdsPlugin.initialize("GAME_ID_GOES_HERE", testMode: true);
   }
 
   @override
